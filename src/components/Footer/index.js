@@ -4,26 +4,29 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import {
   // AiOutlineTwitter,
   AiFillInstagram,
-} from "react-icons/ai";
+} from 'react-icons/ai';
 
-const Footer = () => {
-  let date = new Date();
-  let year = date.getFullYear();
+function Footer() {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
-    <Container fluid className='footer'>
+    <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
           <h3>Designed e Desenvolvido por Hugo Mafra</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year}</h3>
+          <h3>
+            Copyright ©
+            {year}
+          </h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
             <li className="social-icons">
               <a
                 href="https://github.com/Hugorc10"
-                style={{ color: "white" }}
+                style={{ color: 'white' }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -43,7 +46,7 @@ const Footer = () => {
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/hugo-teixeira-mafra/"
-                style={{ color: "white" }}
+                style={{ color: 'white' }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -53,7 +56,7 @@ const Footer = () => {
             <li className="social-icons">
               <a
                 href="https://www.instagram.com/hugotmafra_"
-                style={{ color: "white" }}
+                style={{ color: 'white' }}
                 target="_blank"
                 rel="noopener noreferrer"
               >

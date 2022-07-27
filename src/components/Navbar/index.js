@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
-import { Navbar } from 'react-bootstrap';
-import Button from "react-bootstrap/Button";
-import Nav from "react-bootstrap/Nav";
+import { Navbar, Container } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
 import {
   AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
-} from "react-icons/ai";
-import { Container } from 'react-bootstrap';
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
-import { Link } from "react-router-dom";
+} from 'react-icons/ai';
+import { GiSkills } from 'react-icons/gi';
+import { RiToolsLine } from 'react-icons/ri';
+import { CgGitFork, CgFileDocument } from 'react-icons/cg';
+import { Link } from 'react-router-dom';
 
-import { CgFileDocument } from "react-icons/cg";
-
-const NavBar = () => {
+function NavBar() {
   const [expand, setExpand] = useState(false);
   const [navColour, setNavColour] = useState(false);
   // const [toggle, setToggle] = useState(false);
@@ -61,14 +59,15 @@ const NavBar = () => {
     }
   }
 
-  window.addEventListener("scroll", scrollHandler);
+  window.addEventListener('scroll', scrollHandler);
 
   return (
     <Navbar
       expanded={expand}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}>
+      className={navColour ? 'sticky' : 'navbar'}
+    >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
           <img className="img-fluid logo" alt="brand" />
@@ -76,18 +75,20 @@ const NavBar = () => {
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
-            setExpand(expand ? false : "expanded");
+            setExpand(expand ? false : 'expanded');
           }}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span />
+          <span />
+          <span />
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => setExpand(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: '2px' }} />
+                {' '}
+                Home
               </Nav.Link>
             </Nav.Item>
 
@@ -97,7 +98,9 @@ const NavBar = () => {
                 to="/about"
                 onClick={() => setExpand(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: '2px' }} />
+                {' '}
+                About
               </Nav.Link>
             </Nav.Item>
 
@@ -108,9 +111,24 @@ const NavBar = () => {
                 onClick={() => setExpand(false)}
               >
                 <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
+                  style={{ marginBottom: '2px' }}
+                />
+                {' '}
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/project"
+                onClick={() => setExpand(false)}
+              >
+                <GiSkills
+                  style={{ marginBottom: '2px' }}
+                />
+                {' '}
+                Skills
               </Nav.Link>
             </Nav.Item>
 
@@ -120,17 +138,21 @@ const NavBar = () => {
                 to="/resume"
                 onClick={() => setExpand(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <RiToolsLine style={{ marginBottom: '2px' }} />
+                {' '}
+                Tools
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
-                href="https://blogs.soumya-jit.tech/"
-                target="_blank"
-                rel="noreferrer"
+                as={Link}
+                to="/resume"
+                onClick={() => setExpand(false)}
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+                <CgFileDocument style={{ marginBottom: '2px' }} />
+                {' '}
+                Resume
               </Nav.Link>
             </Nav.Item>
 
@@ -140,8 +162,9 @@ const NavBar = () => {
                 target="_blank"
                 className="fork-btn-inner"
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                <CgGitFork style={{ fontSize: '1.2em' }} />
+                {' '}
+                <AiFillStar style={{ fontSize: '1.1em' }} />
               </Button>
             </Nav.Item>
           </Nav>

@@ -1,14 +1,14 @@
 import React from 'react';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 
-
-const Particle = () => {
+function Particle() {
   const particlesInit = async (main) => {
     console.log(main);
 
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // this loads the tsparticles package bundle,
+    // it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(main);
   };
@@ -24,16 +24,16 @@ const Particle = () => {
       options={{
         background: {
           color: {
-            value: "#0d47a1",
+            value: '#0d47a1',
           },
         },
         fpsLimit: 60,
         interactivity: {
-          detectsOn: "canvas",
+          detectsOn: 'canvas',
           events: {
             onClick: {
               enable: true,
-              mode: "push",
+              mode: 'push',
             },
             resize: true,
           },
@@ -53,16 +53,16 @@ const Particle = () => {
             opacity: 0.03,
           },
           color: {
-            value: "#ffffff",
+            value: '#ffffff',
           },
           collisions: {
             enable: false,
           },
           move: {
-            direction: "none",
+            direction: 'none',
             enable: true,
             outModes: {
-              default: "bounce",
+              default: 'bounce',
             },
             random: false,
             speed: 0.5,
@@ -84,7 +84,7 @@ const Particle = () => {
             value: 0.8,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
             value: 2,
@@ -94,6 +94,6 @@ const Particle = () => {
       }}
     />
   );
-};
+}
 
 export default Particle;

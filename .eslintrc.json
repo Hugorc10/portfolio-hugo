@@ -5,7 +5,8 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "airbnb"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -20,13 +21,17 @@
   "rules": {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-uses-vars": "error",
+    "indent": [
+      "error",
+      2
+    ],
+    "react/jsx-uses-vars": 1,
     "react/jsx-filename-extension": [
       1,
       {
         "extensions": [
           ".js",
-          ".ts"
+          ".jsx"
         ]
       }
     ]
