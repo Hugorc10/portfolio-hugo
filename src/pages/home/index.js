@@ -5,6 +5,7 @@ import Particle from '../../components/Particle';
 import { Container } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 import Type from '../../components/Type/index';
+import Home2 from './home2';
 import homeLogo from "../../Assets/home-main.svg";
 
 const Home = () => {
@@ -48,6 +49,7 @@ const Home = () => {
           </Row>
         </Container>
       </Container>
+      <Home2 />
     </section >
   )
 }

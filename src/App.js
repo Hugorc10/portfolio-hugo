@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import './style.css';
 import Footer from './components/Footer';
 import Home from './pages/home';
 import Preloader from "../src/components/Preloader";
@@ -10,8 +8,11 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
-import Navbar from './components/NavBar';
+import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
+import './style.css';
+import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
