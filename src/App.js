@@ -1,45 +1,47 @@
-import React, { useCallback } from 'react';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import particlesOptions from "./particles.json";
+import './style.css';
+import Footer from './components/Footer';
+import Home from './pages/home';
+import Preloader from "../src/components/Preloader";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
+import Navbar from './components/NavBar';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
-    const particlesInit = useCallback(main => {
-        loadFull(main);
-    }, [])
+  const [load, upadateLoad] = useState(true);
 
-    return (
-        <div className="App">
-            <Particles options={particlesOptions} init={particlesInit}/>
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <p>
-                    Edit <code>src/particles.json</code> to customize Particles, then save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-                <a
-                    className="App-link"
-                    href="https://particles.js.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    See Particles samples
-                </a>
-            </header>
-        </div>
-    );
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <Router>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/project" element={<Projects />} /> */}
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/resume" element={<Resume />} /> */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
