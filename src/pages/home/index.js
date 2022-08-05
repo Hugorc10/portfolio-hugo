@@ -95,8 +95,8 @@ function Home() {
                   </i>
                   <br />
                   <br />
-                  Whenever possible, I also apply my passion for developing products
-                  with
+                  No entanto, eu gosto de trabalhar em projetos que me permitam
+                  desenvolver aplicações com
                   {' '}
                   <b className="purple">Node.js</b>
                   {' '}
@@ -104,7 +104,7 @@ function Home() {
                   <i>
                     <b className="purple">
                       {' '}
-                      Bibliotecas e Frameworks Javascript modernas
+                      bibliotecas e frameworks Javascript modernas
                     </b>
                   </i>
                   &nbsp; como

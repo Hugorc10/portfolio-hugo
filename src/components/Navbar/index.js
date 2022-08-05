@@ -12,6 +12,7 @@ import { GiSkills } from 'react-icons/gi';
 import { RiToolsLine } from 'react-icons/ri';
 import { CgGitFork, CgFileDocument } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
+import Logo from '../../Assets/images/hugo-logo.png';
 
 function NavBar() {
   const [expand, setExpand] = useState(false);
@@ -70,7 +71,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img className="img-fluid logo" alt="brand" />
+          <img src={Logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
