@@ -1,5 +1,4 @@
-import React, { useCallback } from 'react';
-import { loadFull } from 'tsparticles';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Tilt from 'react-parallax-tilt';
 import {
@@ -8,25 +7,22 @@ import {
   AiFillInstagram,
 } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
-import particlesOptions from '../../particles.json';
-import Particle from '../../components/Particle';
+// import particlesOptions from './particles.json';
+import Particle from '../../components/Particles';
 import Type from '../../components/Type/index';
 import homeLogo from '../../Assets/home-main.svg';
 
+import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import myImg from '../../Assets/avatar.jpg';
 
 function Home() {
-  const particlesInit = useCallback((main) => {
-    loadFull(main);
-  }, []);
-
   return (
     <>
       <section>
         <Container fluid className="home-section" id="home">
-          <Particle options={particlesOptions} init={particlesInit} />
+          <Particle id="tsparticles" />
           <Container>
             <Row>
               <Col md={7} className="home-header">

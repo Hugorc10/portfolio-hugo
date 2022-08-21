@@ -5,9 +5,9 @@ import {
   Routes,
   Navigate,
 } from 'react-router-dom';
-import Resume from './pages/resume';
+import Resume from './pages/Resume';
 import Footer from './components/Footer';
-import Home from './pages/home';
+import Home from './pages/Home';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
