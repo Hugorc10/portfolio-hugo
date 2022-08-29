@@ -46,13 +46,13 @@
   }
 }
 
-/* #tsparticles {
+#tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
   height: 100%;
-} */
+}
 
 .home-header {
   padding-top: 80px !important;
@@ -77,11 +77,13 @@
 .heading {
   font-size: 2.4em !important;
   padding-left: 50px !important;
+  color: whitesmoke;
 }
 
 .heading-name {
   font-size: 2.5em !important;
   padding-left: 45px !important;
+  color: whitesmoke;
 }
 
 .main-name {
@@ -184,7 +186,7 @@
 }
 
 .home-social-icons:hover::before {
-  transform: scale(1.1);
+  transform: scale(1.2);
   box-shadow: 0 0 15px #801f95;
 }
 
@@ -195,58 +197,12 @@
   text-shadow: 0 0 2px #87209e;
 }
 
-.social-icons {
-  display: inline-block !important;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
 .icon-colour {
   color: #700c86 !important;
 }
 
-/* --------- */
-/* Footer */
-/* --------- */
-.footer {
-  background-color: rgb(10, 4, 22);
-  bottom: 0 !important;
-  padding-top: 10px !important;
-  padding-bottom: 8px !important;
-}
-
-.footer-copywright {
-  text-align: center !important;
-}
-
-.footer-body {
-  z-index: 1;
-  text-align: center !important;
-}
-
-@media (max-width: 767px) {
-  .footer-copywright {
-    text-align: center !important;
-  }
-
-  .footer-body {
-    text-align: center !important;
-  }
-}
-
-.footer h3 {
-  font-size: 1em;
-  color: white !important;
-  margin-top: 0.5em !important;
-  margin-bottom: 0.5em !important;
-}
-
-.footer-icons {
-  margin-top: 0.5em !important;
-  margin-bottom: 0.5em !important;
-  padding: 0 !important;
-}
-
-.blockquote-footer {
-  color: #a588c0 !important;
+.social-icons {
+  display: inline-block !important;
+  padding-right: 15px;
+  padding-left: 15px;
 }

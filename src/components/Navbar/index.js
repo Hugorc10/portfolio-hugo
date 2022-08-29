@@ -14,6 +14,8 @@ import { CgGitFork, CgFileDocument } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 import Logo from '../../Assets/images/hugo-logo.png';
 
+import './style.css';
+
 function NavBar() {
   const [expand, setExpand] = useState(false);
   const [navColour, setNavColour] = useState(false);

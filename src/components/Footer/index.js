@@ -6,6 +6,8 @@ import {
   AiFillInstagram,
 } from 'react-icons/ai';
 
+import './style.scss';
+
 function Footer() {
   const date = new Date();
   const year = date.getFullYear();
@@ -13,7 +15,7 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Pensando e Desenvolvido por Hugo Teixeira Mafra</h3>
+          <h3>Desenvolvido por Hugo Teixeira Mafra</h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>
@@ -26,11 +28,10 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://github.com/Hugorc10"
-                style={{ color: 'white' }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub />
+                <FaGithub className="fa" />
               </a>
             </li>
             {/* <li className="social-icons">
@@ -46,21 +47,19 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/hugo-teixeira-mafra/"
-                style={{ color: 'white' }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn className="fa" />
               </a>
             </li>
             <li className="social-icons">
               <a
                 href="https://www.instagram.com/hugotmafra_"
-                style={{ color: 'white' }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiFillInstagram />
+                <AiFillInstagram className="fa" />
               </a>
             </li>
           </ul>
