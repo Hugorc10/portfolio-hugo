@@ -65,33 +65,33 @@ function Home() {
             <Row>
               <Col md={8} className="home-about-description">
                 <h1 style={{ fontSize: '2.6em' }}>
-                  LET ME
+                  QUEM
                   {' '}
-                  <span className="purple"> INTRODUCE </span>
+                  <span className="purple">SOU</span>
                   {' '}
-                  MYSELF
+                  EU
                 </h1>
                 <p className="home-about-body">
-                  Apaixonado por JavaScript e programação web.
+                  Apaixonado por programação web, tenho 27 anos e atualmente moro na Bahia.
                   <br />
                   <br />
                   Tenho conhecimento em tais linguagens:
                   <i>
-                    <b className="purple"> Java, HTML, CSS, Javascript, TypeScript. </b>
+                    <b className="purple"> Java, HTML, CSS, Sass, Javascript, TypeScript. </b>
                   </i>
                   <br />
                   <br />
-                  Graduando em Ciência da Computação, meus principais interesses são construir
+                  Graduando em Ciência da Computação, meus principais interesses são em construir
                   <i>
                     <b className="purple">
                       {' '}
-                      aplicações web e mobile.
+                      aplicações web e serverless applications.
                       {' '}
                     </b>
                   </i>
                   <br />
                   <br />
-                  No entanto, eu gosto de trabalhar em projetos que me permitam
+                  Eu gosto de trabalhar em projetos que me permitam
                   desenvolver aplicações com
                   {' '}
                   <b className="purple">Node.js</b>
@@ -105,7 +105,7 @@ function Home() {
                   </i>
                   &nbsp; como
                   <i>
-                    <b className="purple"> React.js</b>
+                    <b className="purple"> React.js e Next.js</b>
                   </i>
                 </p>
               </Col>
