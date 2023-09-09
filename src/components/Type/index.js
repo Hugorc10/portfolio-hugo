@@ -8,6 +8,7 @@ function Type() {
         strings: [
           'Desenvolvedor Front-End',
           'Desenvolvedor Back-End',
+          'DevOps',
           'Open Source Contribuidor',
         ],
         autoStart: true,
